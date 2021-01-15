@@ -4,7 +4,7 @@
   "description": "component based frontend framework",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
   },
   "keywords": [
     "stache",
@@ -12,5 +12,17 @@
     "staches"
   ],
   "author": "Simeon Dimitrov",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-auto-imports": "^3.1.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-jshint": "^2.1.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-uglify": "^3.0.2",
+    "panini": "^1.7.1"
+  }
 }

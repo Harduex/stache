@@ -1,0 +1,1 @@
+console.log("Hello from main"),console.log("Hello from component"),console.log("Hello from header");
