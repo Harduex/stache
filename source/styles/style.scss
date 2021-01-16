@@ -1,5 +1,10 @@
+//Plugins
+@import "./normalize.scss";
+
+//Components
 @import "./auto-imports.scss";
 
+//Direct
 img {
     width: 500px;
 }

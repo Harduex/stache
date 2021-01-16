@@ -24,5 +24,6 @@
     "gulp-sourcemaps": "^3.0.0",
     "gulp-uglify": "^3.0.2",
     "panini": "^1.7.1"
-  }
+  },
+  "dependencies": {}
 }
