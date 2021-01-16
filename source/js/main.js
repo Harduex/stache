@@ -1,1 +1,4 @@
-console.log('Hello from main');
+window.onload = function() {
+    console.log('Loaded');
+}
+

@@ -4,7 +4,10 @@ image: stache.png
 ---
 
 <main class="index">
-    <h1>{{title}}</h1>
-    <img src="/build/images/{{image}}" alt="Stache">
-    {{> list arg1=title n=20 }}
+    <div class="container">
+        {{> hello text="World" }}
+        <div class="wrapper">
+            {{> counter }}
+        </div>
+    </div>
 </main>

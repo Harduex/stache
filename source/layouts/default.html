@@ -4,21 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <link rel="shortcut icon" type="/build/images/logo-512x512.png" href="/build/favicon.ico" />
-	<link rel="stylesheet" href="{{source}}/build/styles/style.css" type="text/css" media="all" />
-	<script type="module" src="/build/js/main.js"></script>
+
+    <link rel="shortcut icon" type="images/logo-512x512.png" href="favicon.ico" />
+    <link rel="stylesheet" href="styles/style.css" type="text/css" media="all" />
+    <!-- <script type="module" src="js/main.js"></script> -->
+    <script type="text/javascript" src="js/main.js"></script>
 
     <title>{{title}}</title>
 </head>
 
 <body>
     <div id="root">
-        {{> header }}
+        {{> header title="Stache App"}}
         <!-- Everything in pages folder renders in body segment -->
         {{> body }}
         <!-- Everything in pages folder renders in body segment -->
-        {{> footer }}
+        {{> footer corp="Stache"}}
     </div>
 </body>
 

@@ -2,9 +2,9 @@
   "name": "stache",
   "version": "1.0.0",
   "description": "component based frontend framework",
-  "main": "index.js",
+  "main": "App.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "gulp && node App.js & gulp watch"
   },
   "keywords": [
     "stache",
@@ -23,6 +23,7 @@
     "gulp-sass": "^4.1.0",
     "gulp-sourcemaps": "^3.0.0",
     "gulp-uglify": "^3.0.2",
+    "live-server": "^1.2.1",
     "panini": "^1.7.1"
   },
   "dependencies": {}

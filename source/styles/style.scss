@@ -1,10 +1,8 @@
 //Plugins
-@import "./normalize.scss";
+@import "./plugins/normalize.scss";
 
 //Components
 @import "./auto-imports.scss";
 
-//Direct
-img {
-    width: 500px;
-}
+//global
+@import "./global.scss";
