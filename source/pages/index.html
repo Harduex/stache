@@ -4,7 +4,7 @@ image: stache.png
 ---
 
 <main class="index">
-    <h1>Hello {{title}}</h1>
-    <img src="/build/images/{{image}}" alt="Stache">
+    <h1>{{title}}</h1>
+    <img src="images/{{image}}" alt="Stache">
     {{> list arg1=title n=2 }}
 </main>
