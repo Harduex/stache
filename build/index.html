@@ -15,18 +15,15 @@
 <body>
     <div id="root">
         <header class="header">
-            <img class="stache__img--left" src="images/stache-logo-left.png" alt="{">
-            <h2>Stache App</h2>
-            <img class="stache__img--right" src="images/stache-logo-right.png" alt="}">
-        </header>        <!-- Everything in pages folder renders in body segment -->
+            <div class="hello">
+                    <img class="stache__img--left" src="images/stache-logo-left.png" alt="{">
+                    <h1 class="hello__text">Hello Stache!</h1>
+                    <img class="stache__img--right" src="images/stache-logo-right.png" alt="}">
+            </div></header>        <!-- Everything in pages folder renders in body segment -->
         
         <main class="index">
             <div class="container">
-                <div class="hello">
-                        <img class="stache__img--left" src="images/stache-logo-left.png" alt="{">
-                        <h1 class="hello__text">Hello Index Page!</h1>
-                        <img class="stache__img--right" src="images/stache-logo-right.png" alt="}">
-                </div>        <div class="wrapper">
+                <div class="wrapper">
                     <div class="counter">
                         <div class="counter--top">
                             <img class="stache__img--left" src="images/stache-logo-left.png" alt="{">
@@ -34,9 +31,12 @@
                             <img class="stache__img--right" src="images/stache-logo-right.png" alt="}">
                         </div>
                         <div class="counter--bottom">
-                            <button class="counter__button" onclick="sub()">-</button>
                             <input type="text" class="counter__input" value="1">
-                            <button class="counter__button" onclick="add()">+</button>
+                            <div class="counter__buttons">
+                                <button class="counter__button" onclick="sub()">-</button>
+                                <button class="counter__button" onclick="reset()">reset</button>
+                                <button class="counter__button" onclick="add()">+</button>
+                            </div>
                         </div>
                     </div>        </div>
             </div>

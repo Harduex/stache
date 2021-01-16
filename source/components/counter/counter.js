@@ -1,4 +1,5 @@
 var i = 0;
+
 function add() {
     var n = Number(document.getElementsByClassName("counter__input")[0].value);
     i += n;
@@ -12,4 +13,10 @@ function sub() {
 
     i -= n;
     document.getElementsByClassName("counter__number")[0].innerHTML = i;
+};
+
+function reset() {
+    i=0;
+    document.getElementsByClassName("counter__number")[0].innerHTML = i;
+    document.getElementsByClassName("counter__input")[0].value = i+1;
 };

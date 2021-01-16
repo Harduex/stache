@@ -2,5 +2,18 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 6em;
+}
+
+.stache {
+    &__img {
+        &--left {
+            height: 4.5em;
+            margin-right: 1em;
+        }
+
+        &--right {
+            height: 4.5em;
+            margin-left: 1em;
+        }
+    }
 }

@@ -8,6 +8,8 @@ html, body, #root {
     height: 100%;
 }
 
+//Pages
+//Index
 .index {
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -15,6 +17,9 @@ html, body, #root {
 .container {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 180px);
 }
 
 .wrapper {
@@ -22,22 +27,6 @@ html, body, #root {
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
-    width: 300px;
+    width: $wrapper-width;
     margin: 0 auto;
-}
-
-//Global
-
-.stache {
-    &__img {
-        &--left {
-            height: 5em;
-            margin-right: 1em;
-        }
-
-        &--right {
-            height: 5em;
-            margin-left: 1em;
-        }
-    }
 }
