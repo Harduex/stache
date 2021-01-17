@@ -88,17 +88,31 @@ gulp.task('js:build', function () {
 
 gulp.task('js', gulp.series('js:clean', 'js:build'));
 
+//Images
+gulp.task('images:clean', function () {
+    return del('build/images/**.*');
+});
+
+gulp.task('images:move', function () {
+	return gulp.src('source/images/**.*')
+		.pipe(gulp.dest('build/images'));
+});
+
+gulp.task('images', gulp.series('images:clean', 'images:move'));
+
 //Watch
 gulp.task('watch', function () {
+	gulp.watch('source/images/**.*', gulp.series('images'));
+
 	gulp.watch(['source/layouts/**/*.html', 'source/pages/**/*.html', 'source/components/**/*.html'], gulp.series('pages'));
     
     gulp.watch(['source/styles/**/*.scss', 'source/components/**/*.scss'], gulp.series('sass'));
     
     gulp.watch(['source/js/**/*.js', 'source/components/**/*.js'], gulp.series('js'));
     
-	gulp.watch('source/data/**/*.json', gulp.series('pages'));
+    gulp.watch('source/data/**/*.json', gulp.series('pages'));    
 });
 
 //Default
 gulp.task('default',
-	gulp.series(gulp.parallel('pages', 'sass', 'js')));
+	gulp.series(gulp.parallel('pages', 'sass', 'js', 'images')));

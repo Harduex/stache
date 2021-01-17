@@ -1,19 +1,32 @@
 var i = 0;
+var input = ".counter__input";
+var number = ".counter__number";
+
+function handleInput() {
+    $(input).on('change paste keyup', function () {
+        var value = $(this).val();
+        $(this).val(value.replace(/[^\d.-]/g, ''));
+    })
+}
 
 function add() {
-    var n = Number($(".counter__input").val());
+    var n = Number($(input).val());
     i += n;
-    $(".counter__number").html(i);
+    $(number).html(i);
 };
 
 function sub() {
-    var n = Number($(".counter__input").val());
+    var n = Number($(input).val());
     i -= n;
-    $(".counter__number").html(i);
+    $(number).html(i);
 };
 
 function reset() {
-    i=0;
-    $(".counter__number").html(i);
-    $(".counter__input").val(i+1);
+    i = 0;
+    $(number).html(i);
+    $(input).val(i + 1);
 };
+
+$(document).ready(function () {
+    handleInput();
+});

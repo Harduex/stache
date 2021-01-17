@@ -355,7 +355,6 @@ html, body, #root {
     line-height: 0;
     border: 1px solid #cecece;
     background-color: white;
-    outline: none;
     padding: 0.7em; }
     .counter__button:hover {
       background-color: #f3f3f3;
