@@ -1,22 +1,19 @@
 var i = 0;
 
 function add() {
-    var n = Number(document.getElementsByClassName("counter__input")[0].value);
+    var n = Number($(".counter__input").val());
     i += n;
-    document.getElementsByClassName("counter__number")[0].innerHTML = i;
-    console.log(n);
-
+    $(".counter__number").html(i);
 };
 
 function sub() {
-    var n = Number(document.getElementsByClassName("counter__input")[0].value);
-
+    var n = Number($(".counter__input").val());
     i -= n;
-    document.getElementsByClassName("counter__number")[0].innerHTML = i;
+    $(".counter__number").html(i);
 };
 
 function reset() {
     i=0;
-    document.getElementsByClassName("counter__number")[0].innerHTML = i;
-    document.getElementsByClassName("counter__input")[0].value = i+1;
+    $(".counter__number").html(i);
+    $(".counter__input").val(i+1);
 };
