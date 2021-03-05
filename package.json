@@ -14,9 +14,13 @@
   "author": "Simeon Dimitrov",
   "license": "ISC",
   "devDependencies": {
+    "@babel/core": "^7.13.8",
+    "@babel/preset-env": "^7.13.9",
+    "babel-polyfill": "^6.26.0",
     "del": "^6.0.0",
     "gulp": "^4.0.2",
     "gulp-auto-imports": "^3.1.1",
+    "gulp-babel": "^8.0.0",
     "gulp-concat": "^2.6.1",
     "gulp-jshint": "^2.1.0",
     "gulp-rename": "^2.0.0",
