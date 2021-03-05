@@ -1,41 +1,46 @@
-//Encapsulating variables to be reachable only on this component
+// * Counter component logic
 const Counter = (function (global) {
-    var i = 0;
-    var input = ".counter__input";
-    var number = ".counter__number";
+    let i = 0;
+    const input = ".counter__input";
+    const number = ".counter__number";
 
-    return function (actions) {
+    return (actions) => {
 
-        function add() {
+        // * Setup function that runs by default on Counter component function invoking
+        function load () {
+            // * Some function calls
+            handleInputChange();
+            console.log("Counter Loaded");
+        }
+
+        // * Actions
+        const add = () => {
             var n = Number($(input).val());
             i += n;
             $(number).html(i);
         };
 
-        function sub() {
+        const sub = () => {
             var n = Number($(input).val());
             i -= n;
             $(number).html(i);
         };
 
-        function reset() {
+        const reset = () => {
             i = 0;
             $(number).html(i);
             $(input).val(i + 1);
         };
 
-        //Event listeners
-        function handleInput() {
+        // * Event listeners
+        function handleInputChange() {
             $(input).on('change paste keyup', function () {
                 var value = $(this).val();
                 $(this).val(value.replace(/[^\d.-]/g, ''));
             })
         }
 
-        function loaded() {
-            console.log("Counter Loaded");
-        }
-
+        // * Calling specific action
         switch (actions) {
             case 'add':
                 return add();
@@ -44,8 +49,7 @@ const Counter = (function (global) {
             case 'reset':
                 return reset();
             default:
-                loaded();
-                handleInput();
+                load();
         }
     };
 
