@@ -6,6 +6,7 @@ const panini = require('panini');
 // styles
 const sourcemaps = require('gulp-sourcemaps');
 const sass = require('gulp-sass');
+var sassGlob = require('gulp-sass-glob');
 
 // scripts
 const uglify = require('gulp-uglify');
@@ -14,7 +15,6 @@ const uglify = require('gulp-uglify');
 const concat = require('gulp-concat');
 const rename = require('gulp-rename');
 const del = require("del");
-const autoImports = require('gulp-auto-imports');
 
 //Tasks
 gulp.task('all:clean', function () {
@@ -49,20 +49,11 @@ gulp.task('css:clean', function () {
     return del('build/**/*.css');
 });
 
-gulp.task('sass:load', function () {
-    var dest = 'source/styles'
-    return (
-        gulp
-            .src('./source/components/**/*.scss')
-            .pipe(autoImports({ preset: 'scss', dest: dest }))
-            .pipe(gulp.dest(dest))
-    )
-});
-
 gulp.task('sass:compile', function (done) {
 
     return gulp.src('source/styles/style.scss')
         .pipe(sourcemaps.init())
+        .pipe(sassGlob())
         .pipe(sass())
         .on('error', sass.logError)
         .pipe(rename('style.css'))
@@ -70,7 +61,7 @@ gulp.task('sass:compile', function (done) {
         .pipe(gulp.dest('build/styles'));
 });
 
-gulp.task('sass', gulp.series('css:clean', 'sass:load', 'sass:compile'));
+gulp.task('sass', gulp.series('css:clean', 'sass:compile'));
 
 //Scripts
 gulp.task('js:clean', function () {
