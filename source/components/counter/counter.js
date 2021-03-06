@@ -1,41 +1,43 @@
 // * Counter component logic
 const Counter = (function (global) {
-    let i = 0;
-    const input = ".counter__input";
-    const number = ".counter__number";
+    const inputElement = ".counter__input";
+    const numberElement = ".counter__number";
+
+    let value = 0;
+    let number = Number($(inputElement).val() ?? 0);
+
 
     return (actions) => {
 
         // * Setup function that runs by default on Counter component function invoking
-        function load () {
+        function load() {
             // * Some function calls
             handleInputChange();
             console.log("Counter Loaded");
         }
 
         // * Actions
-        const add = () => {
-            var n = Number($(input).val());
-            i += n;
-            $(number).html(i);
+        function add() {
+            value += number;
+            $(numberElement).html(value);
         };
 
-        const sub = () => {
-            var n = Number($(input).val());
-            i -= n;
-            $(number).html(i);
+        function sub() {
+            value -= number;
+            $(numberElement).html(value);
         };
 
-        const reset = () => {
-            i = 0;
-            $(number).html(i);
-            $(input).val(i + 1);
+        function reset() {
+            value = 0;
+            $(numberElement).html(value);
+            $(inputElement).val(value + 1);
         };
 
         // * Event listeners
         function handleInputChange() {
-            $(input).on('change paste keyup', function () {
+            $(inputElement).on('change paste keyup', function () {
                 var value = $(this).val();
+                number = Number($(this).val());
                 $(this).val(value.replace(/[^\d.-]/g, ''));
             })
         }
@@ -55,6 +57,4 @@ const Counter = (function (global) {
 
 }(window))
 
-$(document).ready(function () {
-    Counter();
-});
+Counter();

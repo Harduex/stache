@@ -4,11 +4,12 @@ const Footer = (function (global) {
 
     return (actions) => {
 
-        function load () {
+        function load() {
             updateFooterYear();
+            console.log('Footer loaded');
         }
 
-        function updateFooterYear () {
+        function updateFooterYear() {
             $(yearElement).text(currentYear);
         };
 
@@ -22,6 +23,4 @@ const Footer = (function (global) {
 
 }(window))
 
-$(document).ready(function () {
-    Footer();
-});
+Footer();
