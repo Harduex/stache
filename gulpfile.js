@@ -73,7 +73,7 @@ gulp.task('js:clean', function () {
 gulp.task('js:build', function () {
     return gulp.src(['source/js/plugins/*.js', 'source/js/main.js', 'source/components/**/*.js'])
         .pipe(babel({
-            presets: ['@babel/preset-env']
+            presets: ['@babel/preset-env'],
         }))
         .pipe(concat('build.js'))
         .pipe(uglify({ compress: { hoist_funs: false, hoist_vars: false } }))
