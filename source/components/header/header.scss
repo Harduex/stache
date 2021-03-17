@@ -1,3 +1,13 @@
 .header {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    -webkit-box-shadow: 0px 3px 22px 15px rgba(0, 0, 0, 0.03);
+    -moz-box-shadow: 0px 3px 22px 15px rgba(0, 0, 0, 0.03);
+    box-shadow: 0px 3px 22px 15px rgba(0, 0, 0, 0.03);
+    height: $header-height;
+    border-bottom: 1px solid $header-color;
+    font-size: 20px;
+    font-weight: bold;
 }

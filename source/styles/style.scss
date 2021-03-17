@@ -1,10 +1,14 @@
 //Plugins
-@import "./normalize.scss";
+@import "./plugins/normalize.scss";
+
+//Variables
+@import "./variables.scss";
+
+//Variables
+@import "./mixins.scss";
+
+//global
+@import "./global.scss";
 
 //Components
-@import "./auto-imports.scss";
-
-//Direct
-img {
-    width: 300px;
-}
+@import "../components/**/**.scss";

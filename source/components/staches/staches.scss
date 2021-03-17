@@ -1,0 +1,19 @@
+.staches {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .stache {
+        &__img {
+            &--left {
+                height: 3em;
+                margin-right: 0.5em;
+            }
+
+            &--right {
+                height: 3em;
+                margin-left: 0.5em;
+            }
+        }
+    }
+}

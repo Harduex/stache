@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+    <link rel="stylesheet" href="styles/style.css" type="text/css" media="all" />
+    <script type="text/javascript" src="js/main.js" defer></script>
+
+    <title>Working with data</title>
+</head>
+
+<body>
+    <div id="root">
+        <header class="header">
+            <div class="staches">
+                    <img class="stache__img--left" src="images/stache-logo-left.png" alt="{">
+                    <p class="hello__text">Working with data</p>
+                    <img class="stache__img--right" src="images/stache-logo-right.png" alt="}">
+            </div></header>        <!-- Everything in pages folder renders in body segment -->
+        
+        <main class="data-operations">
+            <div class="container">
+                <div class="wrapper">
+                    <h1>Working with data</h1>
+                    <div class="todo">
+                    
+                        <div class="todo__form">
+                            <input type="text" class="todo__input" placeholder="todo content">
+                            <button class="todo__button" onclick="Todo({action: 'create'})">create</button>
+                        </div>
+                    
+                        <ul class="todo__list">
+                        </ul>
+                    
+                    </div>            <a href="/" class="link">↩ Back to home page</a>
+                </div>
+            </div>
+        </main>
+        <!-- Everything in pages folder renders in body segment -->
+        <footer class="footer">
+            <p>&copy; Copyright <span class="footer__copyright-year"></span>, Stache</p>
+        </footer>    </div>
+</body>
+
+</html>

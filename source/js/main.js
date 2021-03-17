@@ -1,1 +1,1 @@
-console.log('Hello from main');
+console.log('Document Loaded');

@@ -1,10 +1,12 @@
 ---
-title: Index Page
-image: stache.png
+title: Stache App
 ---
 
 <main class="index">
-    <h1>{{title}}</h1>
-    <img src="images/{{image}}" alt="Stache">
-    {{> list arg1=title n=2 }}
+    <div class="container">
+        <div class="wrapper">
+            {{> counter }}
+            <a href="/data-operations.html" class="link">Working with data</a>
+        </div>
+    </div>
 </main>
