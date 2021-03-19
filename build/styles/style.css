@@ -336,6 +336,9 @@ body,
   .link:hover {
     color: #01a5e6; }
 
+.index {
+  background-color: white; }
+
 .counter {
   display: flex;
   flex-direction: column;
@@ -418,19 +421,5 @@ body,
   .staches .stache__img--right {
     height: 3em;
     margin-left: 0.5em; }
-
-.todo__form {
-  width: 100%;
-  display: flex;
-  align-items: center; }
-
-.todo__list {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  list-style: none;
-  padding: 0; }
 
 /*# sourceMappingURL=style.css.map */
