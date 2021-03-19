@@ -1,19 +1,19 @@
-//Check for node env
-if ((typeof process !== 'undefined') && (typeof process.versions.node !== 'undefined')) {
+//Check for node environment
+if (typeof module === "object" && typeof module.exports === "object") {
     console.log('code run by server');
-  
+
     //Wrapper component
-    module.exports = (options) => {
+    module.exports = function (options) {
         const children = options.fn(this);
-        const { className, id } = options.hash;
+        const { classes, id } = options.hash;
 
         return (
-            `<div class="${className}" id="${id}"> 
+            `<div class="${classes}" id="${id}"> 
                 ${children}
             </div>`
         );
     }
 
-  } else {
+} else {
     console.log('code run by browser');
-  }
+}

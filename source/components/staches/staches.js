@@ -1,13 +1,13 @@
-if ((typeof process !== 'undefined') && (typeof process.versions.node !== 'undefined')) {
+if (typeof module === "object" && typeof module.exports === "object") {
 
-    module.exports = (options) => {
+    module.exports = function (options, context) {
         const children = options.fn(this);
-        const { className } = options.hash;
+        const { classes } = options.hash;
 
         return (
             `<div class="staches">
                 <img class="stache__img--left" src="images/stache-logo-left.png" alt="{">
-                    <p class="${className}">
+                    <p class="${classes}">
                         ${children}
                     </p>
                 <img class="stache__img--right" src="images/stache-logo-right.png" alt="}">
