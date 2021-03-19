@@ -58,3 +58,4 @@ const Counter = (function (global) {
 }(window))
 
 Counter();
+
